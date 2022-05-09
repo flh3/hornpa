@@ -1,0 +1,17 @@
+{
+    "contents" : "\n#running the WISC example from class\nlibrary(hornpa)\nlibrary(foreign)\nx<-read.spss(to.data.frame=T,\"C:/Users/huangf/desktop/wiscexamplefa.sav\")\nhead(x)\nnrow(x)\nx<-x[complete.cases(x),]\nnames(x)\nnrow(x)\nx2<-x[,3:13]\ncor(x2)\nlength(x2)\ncr<-cor(x2)\nsmc<-1-(1/diag(solve(cr)))\ndiag(cr)<-smc\nwisc<-eigen(cr)\nwisc$values\nhornpa(k=11,size=175,reps=100,method=\"pa\")\n",
+    "created" : 1425326246282.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "747113904",
+    "id" : "E04EFDC3",
+    "lastKnownWriteTime" : 1425326714,
+    "path" : "C:/Users/huangf/Dropbox/Stat4/FH_MU/EFA/efa horn in class.R",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
